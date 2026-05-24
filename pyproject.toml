@@ -1,0 +1,69 @@
+[project]
+name = "placeholder"
+description = "${TPROJECT_DESC}"
+authors = [{ name = "Techcable" }]
+# license = "${TPROJECT_SPDX_LICESNE}"
+# keywords = []
+readme = "README.md"
+classifiers = [
+    "Private :: No Classifiers Specified"
+]
+requires-python = ">=3.12"
+dynamic = ["version"]
+dependencies = []
+
+[project.scripts]
+parchpkg = "parchpkg.__main__:parchpkg"
+
+[dependency-groups]
+# mypy is mature and thorough, ty is fast
+mypy = ["mypy~=1.0", { include-group = "typing" }]
+ty = ["ty", { include-group = "typing" }]
+# keep in sync with [tool.hatch.envs] until hatch supports PEP 754
+test = [
+    "pytest~=9.0",
+    "pytest-sugar~=1.0",
+]
+lint = [
+    "taplo",
+    # pin minor version, since adding new lints triggers failures
+    "typos~=1.46.0",
+]
+# type-only dependencies
+typing = [
+    # "typing_extensions>=4.6",
+]
+dev = [{ include-group = "ty" }, { include-group = "mypy" }, { include-group = "test" }]
+
+[project.urls]
+Source = "${TPROJECT_REPO_URL}"
+
+[build-system]
+requires = [
+    "hatchling",
+    "hatch-vcs",
+]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+# needed to actually include the sources in the wheel
+only-include = ["src"]
+sources = ["src"]
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.envs.hatch-test]
+# use uv instead of venv/pip
+installer = "uv"
+dependency-groups = ["test"]
+extra-dependencies = ["colorama"]
+
+[[tool.hatch.envs.hatch-test.matrix]]
+python = ["3.12", "3.13", "3.14"]
+
+[tool.hatch.build.hooks.vcs]
+# NOTE: Using a version file avoids some overhead
+#
+# This file is explicitly ignored by version control.
+version-file = "src/placeholder/_version.py"

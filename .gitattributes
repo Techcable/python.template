@@ -1,0 +1,2 @@
+# We don't always have lockfiles, but when we do, we don't diff them
+/uv.lock -diff -text

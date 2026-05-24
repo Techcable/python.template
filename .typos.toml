@@ -1,0 +1,14 @@
+[files]
+ignore-hidden = false # we want to check dotfiles
+extend-exclude = [
+    ".git", # needed because we 'ignore-hidden'
+]
+
+[default.extend-words]
+# Pydantic uses 'ser' as a shorthand for 'serialize'
+# See issue crate-ci/typos#1318
+ser = "ser"
+
+[type.toml.extend-identifiers]
+# Rule name for ruff
+CPY = "CPY"

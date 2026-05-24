@@ -1,0 +1,32 @@
+##
+## Editors
+##
+*.iml
+.idea
+.vscode
+
+##
+## Python
+##
+__pycache__
+
+# setuptools
+/dist
+/src/*.egg-info
+
+# setuptools_scm
+/src/**/_version.py
+
+# mypy
+.mypy_cache/
+
+# ignore lockfile by default
+/uv.lock
+
+# tox
+/.tox
+
+## Micelanesous
+/build
+/target
+.DS_Store

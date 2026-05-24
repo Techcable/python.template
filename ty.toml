@@ -1,0 +1,5 @@
+# Unfortunately, ty doesn't have a strict mode that forces type annotations
+# This is supposed to be  done by the `ANN` lint in `ruff`.
+
+[src]
+include = ["src"]
