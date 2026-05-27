@@ -10,7 +10,17 @@ classifiers = [
 ]
 requires-python = ">=3.12"
 dynamic = ["version"]
-dependencies = []
+dependencies = [
+    "techcable.orderedset~=0.1",
+    "loguru~=0.7.3",
+]
+
+[project.optional-dependencies]
+pydantic = ["pydantic~=2.0"]
+cli = [
+    "rich~=15.0",
+    "click~=8.0",
+]
 
 [dependency-groups]
 # mypy is mature and thorough, ty is fast
@@ -28,7 +38,7 @@ lint = [
 ]
 # type-only dependencies
 typing = [
-    # "typing_extensions>=4.6",
+    "typing_extensions>=4.6",
 ]
 dev = [{ include-group = "ty" }, { include-group = "mypy" }, { include-group = "test" }]
 
