@@ -12,9 +12,6 @@ requires-python = ">=3.12"
 dynamic = ["version"]
 dependencies = []
 
-[project.scripts]
-parchpkg = "parchpkg.__main__:parchpkg"
-
 [dependency-groups]
 # mypy is mature and thorough, ty is fast
 mypy = ["mypy~=1.0", { include-group = "typing" }]
