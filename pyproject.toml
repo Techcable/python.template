@@ -2,8 +2,8 @@
 name = "placeholder"
 description = "${TPROJECT_DESC}"
 authors = [{ name = "Techcable" }]
-# license = "${TPROJECT_SPDX_LICESNE}"
-# keywords = []
+license = "LicenseRef-placeholder"
+keywords = ["template", "placeholder"]
 readme = "README.md"
 classifiers = [
     "Private :: No Classifiers Specified"
