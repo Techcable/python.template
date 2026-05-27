@@ -1,2 +1,1 @@
 extend = "ruff.shared.toml" # use config from template
-# target_version = "py312" # uncomment if different from pyproject.toml
