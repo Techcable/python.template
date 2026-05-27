@@ -40,7 +40,12 @@ lint = [
 typing = [
     "typing_extensions>=4.6",
 ]
-dev = [{ include-group = "ty" }, { include-group = "mypy" }, { include-group = "test" }]
+dev = [
+    { include-group = "ty" },
+    { include-group = "mypy" },
+    { include-group = "lint" },
+    { include-group = "test" },
+]
 
 [project.urls]
 Source = "${TPROJECT_REPO_URL}"
