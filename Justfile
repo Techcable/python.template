@@ -49,9 +49,6 @@ fix-spelling:
     # Fix obvious spelling issues
     uv run typos --write-changes
 
-# taplo logging is excessively verbose (prints 'file detection' but not files changed)
-export RUST_LOG := "taplo=warn"
-
 # Checks for formatting issues
 check-format: && spellcheck
     @# Invoking ruff directly instead of through uv tool run saves ~12ms per command,
@@ -62,7 +59,7 @@ check-format: && spellcheck
     ruff format --check .
     ruff check --select I --output-format concise .
     # check toml formatting
-    uv taplo format --check
+    uv run tombi format --check
 
 format: _format && spellcheck
 
@@ -70,4 +67,4 @@ _format:
     ruff format .
     ruff check --select 'I' --fix .
     # format toml
-    uvx taplo format
+    uv run tombi format

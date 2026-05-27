@@ -14,14 +14,13 @@ then delete all repo-specific files in the `template` subdirectory.
 - **Build**: pip, [hatch], uv
 - **Type Checking**: Both [mypy](https://www.mypy-lang.org) and [ty](https://docs.astral.sh/ty/)
 - **Linting**: ruff, [typos] (spellchecker like codespell)
-- **Formatting**: ruff, [taplo] (plan to switch to [tombi] eventually)
+- **Formatting**: ruff, [tombi]
 - **Testing**: pytest, hatch
 
 [typos]: https://github.com/crate-ci/typos
 [Justfile]: https://just.systems
 [pyinvoke]: https://pyinvoke.org/
 [hatch]: https://hatch.pypa.io/latest/
-[taplo]: https://taplo.tamasfe.dev
 [tombi]: http://tombi-toml.github.io/tombi/
 
 ### See Also
