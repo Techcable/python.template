@@ -29,7 +29,6 @@ cli = [
 # mypy is mature and thorough, ty is fast
 mypy = ["mypy~=1.0", { include-group = "typing" }]
 ty = ["ty", { include-group = "typing" }]
-# keep in sync with [tool.hatch.envs] until hatch supports PEP 754
 test = [
     "pytest~=9.0",
     "pytest-sugar~=1.0",
