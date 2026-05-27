@@ -26,7 +26,7 @@ __pycache__
 # tox
 /.tox
 
-## Micelanesous
+## Miscellaneous
 /build
 /target
 .DS_Store
