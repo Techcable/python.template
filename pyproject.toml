@@ -27,7 +27,7 @@ cli = [
 
 [dependency-groups]
 # mypy is mature and thorough, ty is fast
-mypy = ["mypy~=1.0", { include-group = "typing" }]
+mypy = ["mypy~=2.1", { include-group = "typing" }]
 ty = ["ty", { include-group = "typing" }]
 test = [
     "pytest~=9.0",
