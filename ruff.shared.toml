@@ -105,6 +105,9 @@ mypy-init-return = true
 convention = "pep257"
 
 [lint.extend-per-file-ignores]
+"src/**" = [
+    "PT", # flake8-pytest-style - should only apply to tests
+]
 "tests/**" = [
     # excessively pedantic
     "D", # no docstyle
